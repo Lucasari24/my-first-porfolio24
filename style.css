@@ -231,7 +231,9 @@ span {
 }
 .card .back{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
+  text-shadow: 2px 2px #000;
   color: #fff;
   text-align: center;
   -webkit-transform:rotateY(180deg);
@@ -252,9 +254,8 @@ span {
         0deg,
         rgba(0, 0, 0, .4),
         rgba(0, 0, 0, .4)
-    ), url(./argentina-bandera.png);
+    ), url(./html5.png);
     background-position: center;
-    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -269,6 +270,20 @@ span {
     color: #1ce3ce;
     font-size: 6em;
     z-index: 25;
+}
+
+.card-first img{
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 80%;
+  z-index: 24;
+  border-radius: 20px;
+}
+
+.card-first p {
+  z-index: 34;
 }
 
 /*SECTION ABOUTME*/
@@ -297,6 +312,8 @@ span {
   align-self: center;
   color: #fff;
   text-align: center;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .text-aboutme h2 {
@@ -304,18 +321,51 @@ span {
     text-transform: uppercase;
     font-weight: bold;
     font-family: 'Playfair', serif;
-    border-bottom: 4px solid #1ce3ce;
-    width: 60%;
-    margin: 0 auto;
 }
 
 .text-aboutme p {
     font-size: 1em;
     margin:  0 auto;
-    width: 75%;
     padding: 1em;
     text-align: justify;
 }
+
+.divider {
+  width: 100px;
+  height: 5px;
+  background-color: #1ce3ce;
+  margin: 5px 0 15px;
+  animation-name: divider;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes divider {
+    0% {
+      margin: 5px 0 15px;
+      background-color: #1ce3ce;
+      width: 100px;
+      height: 5px;
+    }
+
+    50% {
+      margin: 5px 0 15px;
+      background-color: #02abc3;
+      width: 100%;
+      height: 5px;
+    }
+
+    100% {
+      margin: 5px 80% 15px;
+      background-color: #1ce3ce;
+      width: 100px;
+      height: 5px;
+    }
+}
+
+
 
 
 /*RESPONSIVE*/
