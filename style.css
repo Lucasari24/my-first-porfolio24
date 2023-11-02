@@ -233,7 +233,7 @@ span {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  text-shadow: 2px 2px #000;
+  text-shadow: 1px 1px #000000, 1px 1px #000000, 1px 1px #000000;
   color: #fff;
   text-align: center;
   -webkit-transform:rotateY(180deg);
@@ -248,7 +248,7 @@ span {
   transform:rotateY(0deg);
 }
 
-.cards-container:hover {
+.cards-container--1:hover {
     box-shadow: 2px 2px 15px 2px #1be5cf;
     background: linear-gradient(
         0deg,
@@ -259,10 +259,74 @@ span {
     background-size: cover;
 }
 
+.cards-container:hover {
+    box-shadow: 2px 2px 15px 2px #1be5cf;
+}
+
+.card--first:hover {
+  background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .4)
+    ), url(./html5.png);
+  background-position: center;
+    background-size: cover;
+}
+
+.card--second:hover {
+  background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .4)
+    ), url(./CSS3.jpg);
+  background-position: center center;
+    background-size: cover;
+}
+
+.card--third:hover {
+  background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .4)
+    ), url(./figma-logo.png);
+  background-position: center center;
+    background-size: cover;
+}
+
+.card--fourth:hover {
+  background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .4)
+    ), url(./word-logo.avif);
+  background-position: center center;
+    background-size: cover;
+}
+
+.card--fifth:hover {
+  background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .4)
+    ), url(./marketing-logo.jpg);
+  background-position: center center;
+    background-size: cover;
+}
+
+.card--sixth:hover {
+  background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .4)
+    ), url(./adobe-icons-logo.jpg);
+  background-position: center center;
+    background-size: cover;
+}
+
 .cards-container h3 {
   position: relative;
     color: #fff;
-    z-index: 15;
+    z-index: 45;
     font-size: 2em;
 }
 
@@ -272,17 +336,18 @@ span {
     z-index: 25;
 }
 
-.card-first img{
+.card-style img{
   margin: 0 auto;
   position: absolute;
-  bottom: 0;
-  width: 80%;
-  height: 80%;
+  bottom: 5px;
+  width: 60%;
+  height: 60%;
   z-index: 24;
   border-radius: 20px;
+  opacity: .7;
 }
 
-.card-first p {
+.card-style p {
   z-index: 34;
 }
 
@@ -474,6 +539,10 @@ span {
     padding: 10px;
   }
 
+  .card-style img {
+    display: none;
+  }
+
   .front,
   .back {
     padding-bottom: 2.5em;
@@ -481,7 +550,7 @@ span {
 
   .back p {
     font-size: .8em;
-
+    align-self: center;
   }
 
   .cards-container h3 {
@@ -500,10 +569,11 @@ span {
   }
 
   .text-aboutme h2 {
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .text-aboutme p {
-    width: 85%;
+    width: 100%;
+    font-size: .95em;
   }
 } 
