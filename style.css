@@ -530,6 +530,76 @@ section .portfolio-container {
     }
 }
 
+/*SECTION CONTACT*/
+
+.contact-section {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+        0deg,
+        rgba(3, 11, 57, .5),
+        rgba(3, 11, 57, .5)
+    ), url(./imagen-contact.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 3em 0;
+}
+
+.contact-section h2 {
+  color: #F1F1F1;
+  padding: 0 0 0 3em;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.contact-container {
+  outline: 2px solid red;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 400px;
+  width: 80%;
+}
+
+.image-contact {
+  outline: 2px solid blue;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-contact img{
+  height: 80%;
+}
+
+.formulario {
+  outline: 2px solid yellow;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: ;
+
+  color: #F1F1F1;
+}
+
+textarea {
+  resize: none;
+}
+
+
+
+
 
 /*RESPONSIVE*/
 
