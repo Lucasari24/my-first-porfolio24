@@ -100,8 +100,8 @@ header {
 
 .main {
   color: #EAEAEA;
-  width: 80vw;
   height: 100vh;
+  width: 80%;
   display: grid;
   margin: 0 auto;
   justify-items: center;
@@ -135,7 +135,6 @@ span {
 }
 
 .main img {
-    margin: 0 2em;
     width: 350px;
     border:7px solid #1be5cf;
     height: 520px;
@@ -443,6 +442,7 @@ section .portfolio-container {
   height: 2.5em;
   box-shadow: 3px 3px 21px -5px rgba(102, 231, 200, .69);
   transition: .3s;
+  cursor: pointer;
 }
 
 .button-support button:hover {
@@ -583,6 +583,7 @@ section .portfolio-container {
   color: #1ce3ce;
   margin-right: 10px;
   font-size: 25px;
+  width: 25px;
 }
 
 .links-contactme {
@@ -710,6 +711,77 @@ form > button:hover{
   }
 }
 
+/* SECTION FOOTER*/
+
+footer {
+  width: 100%;
+  height: 100%;
+  background-color: #1ce3ce;
+}
+footer > h2 {
+  font-size: 2em;
+  text-align: center;
+  padding: 32px 0 16px 0;
+  color: #030B39;
+}
+
+.links-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 2em;
+}
+
+.links-footer > a {
+  background-color: #f1f1f1;
+  width: 50px;
+  height: 50px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s ease-out;
+}
+
+.links-footer > a > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #030B39;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-facebook:hover {
+  background-color: #3b5998;
+}
+
+.footer-twitter:hover {
+  background-color: #00acee;
+}
+
+.footer-instagram:hover {
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  }
+
+.footer-linkedin:hover {
+  background-color: #0e76a8;
+}
+
+.links-footer > a > i:hover {
+  color: #fff;
+}
+
 /*RESPONSIVE*/
 
 @media only screen and (max-width: 768px) {
@@ -764,12 +836,18 @@ form > button:hover{
     grid-template-columns: 1fr;
     padding: 3em 0;
     height: 100%;
+    width: 100%;
+  }
+
+  .info-content {
+    width: 100%;
   }
 
   h1 {
     text-align: center;
-    margin-bottom: .5em;
-    font-size: 4em;
+    font-size: 2.5em;
+    width: 50%;
+    margin: 0 auto .5em;
   }
 
   .main p {
@@ -874,6 +952,5 @@ form > button:hover{
   .box-info > h2 {
     font-size: 1.5em;
   }
-
 
 } 
