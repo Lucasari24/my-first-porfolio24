@@ -530,9 +530,9 @@ section .portfolio-container {
     }
 }
 
-/*SECTION CONTACT*/
+/*SECTION CONTACTME*/
 
-.contact-section {
+.contactme-section {
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -545,61 +545,170 @@ section .portfolio-container {
   padding: 3em 0;
 }
 
-.contact-section h2 {
-  color: #F1F1F1;
-  padding: 0 0 0 3em;
-  font-size: 2em;
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  padding: 20px;
+  gap: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.box-info {
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.box-info > h2 {
+  font-family: 'Gabriela', serif;
+  text-align: left;
+  font-weight: bold;
+  letter-spacing: 5px;
   text-transform: uppercase;
 }
 
-.contact-container {
-  outline: 2px solid red;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  height: 400px;
-  width: 80%;
-}
-
-.image-contact {
-  outline: 2px solid blue;
-  width: 100%;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-contact img{
-  height: 80%;
-}
-
-.formulario {
-  outline: 2px solid yellow;
-  width: 100%;
-  height: 100%;
+.data {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 25px;
 }
 
-.form-input {
+.data > p {
+  font-size: 1em;
+}
+
+.data > p > i {
+  color: #1ce3ce;
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.links-contactme {
+  display: flex;
+  gap: 15px;
+}
+
+.links-contactme > a {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  background-color: #1ce3ce;
+  text-align: center;
+  transition: .2s;
+}
+
+.links-contactme > a > i {
+  color: #f1f1f1;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.links-contactme  a:hover {
+  background-color: #2286C8;
+  box-shadow: 1px 1px 7px #2286C8;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: ;
-
-  color: #F1F1F1;
+  text-align: center;
+  gap: 15px;
 }
 
-textarea {
+.input-box {
+  position: relative;
+}
+
+.input-box > input{
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  outline: none;
+  background: rgba(255, 255, 255, .1);
+  border: 3px solid transparent;
+  letter-spacing: 1px;
+  transition: .3s;
+  color: #f1f1f1;
+}
+
+.input-box > input:focus,
+.input-box > textarea:focus {
+  border-bottom: 3px solid #1ce3ce;
+  animation: shake .2s ;
+}
+
+.input-box > input::placeholder,
+.input-box > textarea::placeholder {
+  color: #a5a5a5;
+  text-shadow: .5px .5px #000;
+}
+
+.input-box > input:focus::placeholder,
+.input-box > textarea:focus::placeholder {
+  color: transparent;
+  text-shadow: none;
+}
+
+.input-box > textarea {
+  width: 100%;
+  height: 130px;
+  background: rgba(255, 255, 255, .1);
+  border: 3px solid transparent;
+  letter-spacing: 1px;
+  transition: .3s;
+  color: #f1f1f1;
+  padding: 10px;
   resize: none;
+  outline: none;
 }
 
+.input-box > i {
+  color: rgba(255, 255, 255, .3);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
 
+.input-box > input:focus ~ i {
+  color: #1ce3ce;
+}
 
+form > button {
+  background: #1ce3ce;
+  color: #f1f1f1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 10px;
+  transition: .3s;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 21px -5px rgba(102, 231, 200, .69);
+  border-radius: 10px 0px 10px 0px;
+}
 
+form > button:hover{
+  background-color: #fff;
+  box-shadow: none;
+  color: #030B39;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
 
 /*RESPONSIVE*/
 
@@ -702,7 +811,7 @@ textarea {
   }
 
   .cards-container {
-    height: 200px;
+    height: 150px;
     width: 90%;
     padding: 10px;
   }
@@ -749,4 +858,22 @@ textarea {
     width: 100%;
     font-size: .95em;
   }
+
+  .contact-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }  
+
+  .box-info {
+    gap: 15px;
+    padding-bottom: 15px;
+  }
+
+  .box-info > h2 {
+    font-size: 1.5em;
+  }
+
+
 } 
