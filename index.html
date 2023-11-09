@@ -17,7 +17,7 @@
             <a href="#home">Inicio<span></span></a>
             <a href="#knowledge">Conocimientos<span></span></a>
             <a href="#portfolio">proyectos<span></span></a>
-            <a href="#contact">Contacto<span></span></a>
+            <a href="#aboutme">Contacto<span></span></a>
             <label for="check" class="esconder-menu">&#215</label>
         </nav>
     </header>
@@ -197,35 +197,41 @@
         </article>
     </section>
 
-    <section class="html-section contact-section" id="contact">
-
-        <h2>Mantengámonos en contacto</h2>
+    <section class="html-section contactme-section" id="contactme">
         <div class="contact-container">
-            <div class="image-contact">
-                <img src="./undraw_profile_details_re_ch9r.svg" alt="Ilustración de persona de contacto">
+        <div class="box-info">
+            <h2>Contáctate con nosotros</h2>
+            <div class="data">
+                <p><i class="fa-solid fa-phone"></i> +46 327 191</p>
+                <p><i class="fa-solid fa-envelope"></i> l.galimberti11@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Mason Street 1912</p>
             </div>
-            <form class="formulario" action="" method="post">
-                <div class="form-input">
-                    <label for="full-name">Tu nombre completo:</label>
-                    <input type="text" name="full-name" id="full-name" placeholder="Lucas Galimberti">
-                    <i class="fa-solid fa-user"></i>
+            <div class="links-contactme">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <form action="" method="post">
+                <div class="input-box">
+                    <input type="text" placeholder="Nombre y Apellido" required>
+                    <i class="fa-solid fa-user"></i> 
                 </div>
-                <div class="form-input">
-                    <label for="email">Tu correo electrónico:</label>
-                    <input type="email" name="email" id="email" placeholder="L.galimberti11@gmail.com">
+                <div class="input-box">
+                    <input type="email" placeholder="Correo electrónico" required>
                     <i class="fa-solid fa-envelope"></i>
                 </div>
-                <div class="form-textarea">
-                    <label for="textarea">Escribe el asunto a atender:</label>
-                    <textarea name="textarea" id="textarea" cols="30" rows="10" >Estoy interesado en tus servicios</textarea>
-                    <i class="fa-solid fa-message"></i>
+                <div class="input-box">
+                    <input type="text" placeholder="Asunto" required>
+                    <i class="fa-solid fa-pen-to-square"></i>
                 </div>
-                <div class="button-contact">
-                    <button type="submit">Enviar</button>
+                <div class="input-box">
+                <textarea cols="30" rows="10" placeholder="Escribe tu mensaje" required></textarea>
                 </div>
+                <button type="submit">Enviar Mensaje</button>
             </form>
         </div>
-
     </section>
 </body>
 </html>
